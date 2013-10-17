@@ -5,6 +5,7 @@
 	<title>Introdução ao jQuery</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/estilos.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
 </head>
 <body class="container">
 
@@ -16,5 +17,14 @@
 	
 	<h2 id="texto-copiado"></h2>
 	
+	<script>
+		$('#botao-copiar').on('click', function() {
+			var input  = $('#campo-nome');
+			var nome = input.val();
+			input.val('');
+			$('#texto-copiado').text(nome);
+			input.focus();
+		});
+	</script>
 </body>
 </html>
